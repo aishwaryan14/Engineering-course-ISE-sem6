@@ -1,0 +1,4 @@
+No of digits:0
+No of spaces:8
+No of newlines:3
+No of alphabets:45
