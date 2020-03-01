@@ -1,72 +1,77 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
+
 void main()
 {
-FILE *f1,*f2,*f3;
-int lc,sa,l,op1,o,len;
-char m1[20],la[20],op[20],otp[20];
-f1=fopen("input.txt","r");
-f3=fopen("symtab.txt","w");
-fscanf(f1,"%s %s %d",la,m1,&op1);
-if(strcmp(m1,"START")==0)
-{
- sa=op1;
- lc=sa;
- printf("\t%s\t%s\t%d\n",la,m1,op1);
- }
- else
- lc=0;
-fscanf(f1,"%s %s",la,m1);
-while(!feof(f1))
-{
- fscanf(f1,"%s",op);
- printf("\n%d\t%s\t%s\t%s\n",lc,la,m1,op);
- if(strcmp(la,"-")!=0)
- {
- fprintf(f3,"\n%d\t%s\n",lc,la);
- }
- f2=fopen("optab.txt","r");
- fscanf(f2,"%s %d",otp,&o);
- while(!feof(f2))
- {
-  if(strcmp(m1,otp)==0)
-  {
-    lc=lc+3;
-    break;
-  }
-  fscanf(f2,"%s %d",otp,&o);
-  }
-  fclose(f2);
-  if(strcmp(m1,"WORD")==0)
- 
-    {
-   lc=lc+3;
-   }
-   else if(strcmp(m1,"RESW")==0)
-   {
-    op1=atoi(op);
-    lc=lc+(3*op1);
-    }
-    else if(strcmp(m1,"BYTE")==0)
-    {
-    if(op[0]=='X')
-      lc=lc+1;
-      else
-      {
-      len=strlen(op)-2;
-      lc=lc+len;}
-    }
-    else if(strcmp(m1,"RESB")==0)
-    {
-     op1=atoi(op);
-     lc=lc+op1;
-     }
-    fscanf(f1,"%s%s",la,m1);
-    }
-    if(strcmp(m1,"END")==0)
-    {
-    printf("Program length =\n%d",lc-sa);
-    }
-    fclose(f1);
-    fclose(f3);
-    }
+	FILE *f1,*f2,*f3,*f4;
+	f1=fopen("input.txt","r"); 
+	f3=fopen("symtab.txt","w");
+	f4=fopen("output.txt","w");
+	int locctr,startadr;
+	char label[20],opcode[20],operand[20];
+	
+	fscanf(f1,"%s %s %s",label,opcode,operand);
+
+	if(strcmp(opcode,"START")==0)
+	{
+		startadr=strtol(operand,NULL,16);
+		fprintf(f4,"%X\t%s\t%s\t%s\n",startadr,label,opcode,operand); 
+	}
+	else
+		startadr=0;
+	locctr=startadr;
+
+	fscanf(f1,"%s %s %s",label,opcode,operand);
+	while(strcmp(opcode,"END")!=0)
+	{
+		fprintf(f4,"%X\t%s\t%s\t%s\n",locctr,label,opcode,operand);
+		
+		if(strcmp(label,"-")!=0)
+		{
+			fprintf(f3,"%s\t%X\n",label,locctr);
+		}
+		
+		char tempcode[20],tempval[20];
+		f2=fopen("optab.txt","r");
+		fscanf(f2,"%s %s",tempcode,tempval);
+		while(!feof(f2))
+		{
+			if(strcmp(opcode,tempcode)==0)
+			{
+				locctr+=3;
+				break;
+			}
+			fscanf(f2,"%s %s",tempcode,tempval);
+		}
+		fclose(f2);
+
+		if(strcmp(opcode,"WORD")==0)
+		{
+			locctr+=3;
+		}
+
+		if(strcmp(opcode,"RESW")==0)
+		{
+			locctr = locctr+(3*(strtol(operand,NULL,10)));
+		}
+
+		if(strcmp(opcode,"RESB")==0)
+		{
+			locctr = locctr + strtol(operand,NULL,10);
+		}
+
+		if(strcmp(opcode,"BYTE")==0)
+		{
+			if(operand[0]=='X') 
+				locctr++;
+			else
+				locctr = locctr + strlen(operand)-3;
+		}
+		fscanf(f1,"%s %s %s",label,opcode,operand);
+	}
+	fprintf(f4,"%X\t%s\t%s\t%s\n",locctr,label,opcode,operand);
+	fclose(f1);
+	fclose(f3);
+	fclose(f4);
+}
