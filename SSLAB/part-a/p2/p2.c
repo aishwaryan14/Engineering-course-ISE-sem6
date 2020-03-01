@@ -65,7 +65,7 @@ void main()
 
 		if(strcmp(opcode,"WORD")==0)
 		{
-			int val=strtol(operand,NULL,16);
+			int val=strtol(operand,NULL,10);
 			char num[10];
 			sprintf(num,"%X",val);
 			int l=strlen(num);
