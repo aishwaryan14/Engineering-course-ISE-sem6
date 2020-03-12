@@ -1,0 +1,25 @@
+
+import java.util.*;
+
+import strategy.DecathlonCustomer;
+
+/**
+ * 
+ */
+public class FirstTimeCustomer extends DecathlonCustomer {
+
+    /**
+     * Default constructor
+     */
+    public FirstTimeCustomer() {
+    }
+
+    /**
+     * @return
+     */
+    public void display() {
+        // TODO implement here
+        return null;
+    }
+
+}

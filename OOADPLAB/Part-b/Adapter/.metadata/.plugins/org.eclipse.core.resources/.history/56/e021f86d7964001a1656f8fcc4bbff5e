@@ -1,0 +1,50 @@
+
+import java.util.*;
+
+/**
+ * 
+ */
+public class MyMauritiusTax implements CalcTax {
+
+    /**
+     * Default constructor
+     */
+    public MyMauritiusTax() {
+    }
+
+    /**
+     * 
+     */
+    public double tax_amount;
+
+
+    /**
+     * 
+     */
+    public void MyMauritiusTax() {
+        // TODO implement here
+    }
+
+    /**
+     * @param String 
+     * @param int 
+     * @param double 
+     * @return
+     */
+    public double taxAmount(void String, void int, void double) {
+        // TODO implement here
+        return 0.0d;
+    }
+
+    /**
+     * @param item 
+     * @param qty 
+     * @param price 
+     * @return
+     */
+    public double taxAmount(String item, int qty, double price) {
+        // TODO implement here
+        return 0.0d;
+    }
+
+}

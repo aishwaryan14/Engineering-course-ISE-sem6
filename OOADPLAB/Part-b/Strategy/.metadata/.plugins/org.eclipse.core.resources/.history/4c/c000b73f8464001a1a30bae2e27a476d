@@ -1,0 +1,16 @@
+package strategy;
+
+import java.util.*;
+
+/**
+ * 
+ */
+public interface iDiscountCalculator {
+
+    /**
+     * @param double 
+     * @return
+     */
+    public void calculateBillAmount(void double);
+
+}

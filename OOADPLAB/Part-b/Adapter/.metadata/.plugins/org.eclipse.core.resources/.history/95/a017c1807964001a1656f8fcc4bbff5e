@@ -1,0 +1,17 @@
+
+import java.util.*;
+
+/**
+ * 
+ */
+public interface CalcTax {
+
+    /**
+     * @param item 
+     * @param qty 
+     * @param price 
+     * @return
+     */
+    public double taxAmount(String item, int qty, double price);
+
+}

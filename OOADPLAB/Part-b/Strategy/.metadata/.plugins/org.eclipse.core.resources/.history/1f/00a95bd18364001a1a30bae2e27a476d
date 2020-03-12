@@ -1,0 +1,45 @@
+
+import java.util.*;
+
+import iDiscountCalculator;
+
+/**
+ * 
+ */
+public class DiscountType1 implements iDiscountCalculator {
+
+    /**
+     * Default constructor
+     */
+    public DiscountType1() {
+    }
+
+    /**
+     * 
+     */
+    public double billamount;
+
+    /**
+     * 
+     */
+    public double discount;
+
+    /**
+     * @param double 
+     * @return
+     */
+    public void calculateBillAmount(void double) {
+        // TODO implement here
+        return null;
+    }
+
+    /**
+     * @param double 
+     * @return
+     */
+    public void calculateBillAmount(void double) {
+        // TODO implement here
+        return null;
+    }
+
+}

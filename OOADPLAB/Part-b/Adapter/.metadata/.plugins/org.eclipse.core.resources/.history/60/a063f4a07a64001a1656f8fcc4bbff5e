@@ -1,0 +1,49 @@
+
+import java.util.*;
+
+/**
+ * 
+ */
+public class SwedenTax implements CalcTax {
+
+    /**
+     * Default constructor
+     */
+    public SwedenTax() {
+    }
+
+    /**
+     * 
+     */
+    public double tax_amount;
+
+    /**
+     * 
+     */
+    public void SwedenTax() {
+        // TODO implement here
+    }
+
+    /**
+     * @param item 
+     * @param qty 
+     * @param price 
+     * @return
+     */
+    public double taxAmount(String item, int qty, double price) {
+        // TODO implement here
+        return 0.0d;
+    }
+
+    /**
+     * @param item 
+     * @param qty 
+     * @param price 
+     * @return
+     */
+    public double taxAmount(String item, int qty, double price) {
+        // TODO implement here
+        return 0.0d;
+    }
+
+}

@@ -1,0 +1,23 @@
+
+import java.util.*;
+
+/**
+ * 
+ */
+public class RegCustomer extends DecathlonCustomer {
+
+    /**
+     * Default constructor
+     */
+    public RegCustomer() {
+    }
+
+    /**
+     * @return
+     */
+    public void display() {
+        // TODO implement here
+        return null;
+    }
+
+}

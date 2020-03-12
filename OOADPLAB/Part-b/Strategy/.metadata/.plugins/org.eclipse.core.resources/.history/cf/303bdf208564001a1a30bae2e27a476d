@@ -1,0 +1,44 @@
+package strategy;
+
+import java.util.*;
+
+/**
+ * 
+ */
+public class DecathlonCustomer {
+
+    /**
+     * Default constructor
+     */
+    public DecathlonCustomer() {
+    }
+
+    /**
+     * 
+     */
+    public String name;
+
+    /**
+     * 
+     */
+    public int age;
+
+
+    /**
+     * @param double 
+     * @return
+     */
+    public void calculateDiscount(void double) {
+        // TODO implement here
+        return null;
+    }
+
+    /**
+     * @return
+     */
+    public void display() {
+        // TODO implement here
+        return null;
+    }
+
+}

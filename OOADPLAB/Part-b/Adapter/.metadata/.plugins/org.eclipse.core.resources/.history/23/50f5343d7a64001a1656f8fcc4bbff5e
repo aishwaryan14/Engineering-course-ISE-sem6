@@ -1,0 +1,76 @@
+
+import java.util.*;
+
+/**
+ * 
+ */
+public class Item {
+
+    /**
+     * Default constructor
+     */
+    public Item() {
+    }
+
+    /**
+     * 
+     */
+    public String name;
+
+    /**
+     * 
+     */
+    public double price;
+
+    /**
+     * 
+     */
+    public int qty;
+
+    /**
+     * 
+     */
+    public double billAmount;
+
+    /**
+     * 
+     */
+    public CalcTax ct;
+
+
+    /**
+     * @param name 
+     * @param price 
+     * @param ct
+     */
+    public void item(String name, double price, CalcTax ct) {
+        // TODO implement here
+    }
+
+    /**
+     * @param ct 
+     * @return
+     */
+    public void setTax(CalcTax ct) {
+        // TODO implement here
+        return null;
+    }
+
+    /**
+     * @param qty 
+     * @return
+     */
+    public void setQuantity(int qty) {
+        // TODO implement here
+        return null;
+    }
+
+    /**
+     * @return
+     */
+    public void printPrice() {
+        // TODO implement here
+        return null;
+    }
+
+}

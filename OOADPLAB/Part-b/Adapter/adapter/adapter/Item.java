@@ -1,0 +1,27 @@
+package adapter;
+
+public class Item {
+    public String name;
+    public double price = 0.0;
+    public int qty = 0;
+    public double billAmount = 0.0;
+    public CalcTax ct;
+    Item(String name, double price, CalcTax ct) {
+        this.name = name;
+        this.price = price;
+        this.ct = ct;
+    }
+    public void setTax(CalcTax ct) {
+    	this.ct = ct;
+    }
+    public void setQuantity(int qty) {
+        this.qty = qty;
+    }
+    public void printPrice() {
+    	double tax = ct.taxAmount(name, qty, price);
+    	billAmount = price*qty+tax;
+    	System.out.println("Tax="+tax);
+    	System.out.println("Item "+name+" Quantity "+qty+" Unit price "+price+" Total amount "+billAmount);
+    }
+
+}

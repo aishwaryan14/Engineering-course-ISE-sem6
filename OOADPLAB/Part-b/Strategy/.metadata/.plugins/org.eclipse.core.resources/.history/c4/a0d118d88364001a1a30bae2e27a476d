@@ -1,0 +1,24 @@
+
+import java.util.*;
+
+/**
+ * 
+ */
+public class StrategyClientMain {
+
+    /**
+     * Default constructor
+     */
+    public StrategyClientMain() {
+    }
+
+    /**
+     * @param String[] 
+     * @return
+     */
+    public void main(void String[]) {
+        // TODO implement here
+        return null;
+    }
+
+}

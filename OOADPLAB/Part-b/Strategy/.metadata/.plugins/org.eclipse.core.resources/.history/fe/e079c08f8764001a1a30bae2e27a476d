@@ -1,0 +1,16 @@
+package strategy;
+
+public class RegCustomer extends DecathlonCustomer {
+	public RegCustomer() {
+		super();
+		iCC = new DiscountType1(); 
+		
+	} 
+	public void display() { 
+		
+		System.out.println("\nHello Regular Customer! Welcome Back..."); 
+		super("Ash",20);
+		super.display(); 
+	}
+
+}

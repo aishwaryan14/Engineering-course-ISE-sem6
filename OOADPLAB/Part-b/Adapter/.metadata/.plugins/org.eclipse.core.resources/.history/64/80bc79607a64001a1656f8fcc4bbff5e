@@ -1,0 +1,32 @@
+
+import java.util.*;
+
+/**
+ * 
+ */
+public class NewMauritiusTax {
+
+    /**
+     * Default constructor
+     */
+    public NewMauritiusTax() {
+    }
+
+    /**
+     * 
+     */
+    public void NewMauritiusTax() {
+        // TODO implement here
+    }
+
+    /**
+     * @param qntty 
+     * @param price 
+     * @return
+     */
+    public double calcTax(int qntty, double price) {
+        // TODO implement here
+        return 0.0d;
+    }
+
+}
