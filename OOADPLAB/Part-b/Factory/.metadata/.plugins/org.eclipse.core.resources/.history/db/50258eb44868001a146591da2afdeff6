@@ -1,0 +1,12 @@
+package factory;
+
+public class Teens {
+	public void printRate() {
+		System.out.println("Discount for teenss: 4%");		
+	}
+
+	public void printCustomer() {
+		System.out.println("Belongs to teens group");
+		
+	}
+}

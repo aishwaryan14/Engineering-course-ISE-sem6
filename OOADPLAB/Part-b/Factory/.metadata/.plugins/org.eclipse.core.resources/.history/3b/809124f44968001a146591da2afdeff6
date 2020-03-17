@@ -1,0 +1,11 @@
+package factory;
+
+public class FactoryMain {
+	public static void main(String[] args) {
+		//Customer c;
+		CustomerFactory cf = new CustomerFactory();
+		cf.category("Teen");
+		cf.category("Kids");
+	
+	}
+}

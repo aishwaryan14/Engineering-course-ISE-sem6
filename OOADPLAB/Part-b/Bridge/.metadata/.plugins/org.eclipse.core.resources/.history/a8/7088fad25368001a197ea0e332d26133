@@ -1,0 +1,12 @@
+package bridge;
+
+public class DiscountType1 implements iDiscountCalculator{
+	public void calculateBillAmount(double mrptotal){
+		double discount;
+		double billamount;
+		discount = 0.25;
+		billamount = mrptotal - mrptotal*discount;
+		System.out.println("Bill Amount:"+billamount+" for mrp:"+mrptotal);
+	}
+
+}
